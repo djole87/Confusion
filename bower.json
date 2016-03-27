@@ -1,0 +1,28 @@
+{
+  "name": "Confusion",
+  "homepage": "https://github.com/djole87/Confusion",
+  "authors": [
+    "Djordje Stanojevic <djordje.stanojevic1987@gmail.com>"
+  ],
+  "description": "Confusion Bootstrap project on Coursera",
+  "main": "index.html",
+  "moduleType": [],
+  "keywords": [
+    "bower",
+    "confusion",
+    "bootstrap"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.6",
+    "normalize-css": "^4.0.0",
+    "components-font-awesome": "^4.5.0"
+  }
+}
