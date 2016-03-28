@@ -64,10 +64,6 @@ body{
     color:#000000;
 }
 
-.checkbox-inline .text-white{
-    color:white;
-}
-
 .tab-pane{
     border-left: 1px solid #ddd;
     border-right: 1px solid #ddd;

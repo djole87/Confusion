@@ -74,32 +74,57 @@
 							</a>
 						</li>
 					</ul>
-                    <div class="navbar-sign-in">
-                        <form class="navbar-form navbar-right" role="sign-in">
-                            <div class="form-group">
-                                <input type="email" name="email" class="form-control" placeholder="Email">
-                                <input type="password" name="password" class="form-control" placeholder="Password">
-                            </div>
-                            <div class="checkbox">
-                                <label class="checkbox-inline">
-                                    <input type="checkbox" name="rememberme" value="">
-                                    <span class="text-white" style="color:white">Remember me</span>
-                                </label>
-                            </div>
-                            <div class="form-group">
-                                <button type="submit" class="btn btn-info">Sign In</button>
-                            </div>
+					<ul class="nav navbar-nav navbar-right">
+						<li>
+							<a data-toggle="modal" data-target="#loginModal">
+								<span class="glyphicon glyphicon-log-in"></span> Login
+							</a>
+						</li>
+					</ul>
 
-                        </form>
-                    </div>
 
 				</div>
 			</div>
 		</nav>
+
+		<div id="loginModal" class="modal fade" role="dialog">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">Login</h4>
+					</div>
+
+
+					<div class="modal-body">
+
+							<form class="form-inline">
+								<div class="form-group">
+									<label class="sr-only" for="email">Email address</label>
+									<input type="email" id="email" name="email" class="form-control input-sm" placeholder="Email">
+								</div>
+								<div class="form-group">
+									<label class="sr-only" for="password">Password</label>
+									<input type="password" id="password" name="password" class="form-control input-sm" placeholder="Password">
+								</div>
+
+								<div class="checkbox">
+									<label>
+										<input type="checkbox">
+										Remember me
+									</label>
+								</div>
+								<button type="submit" class="btn btn-info btn-sm">Sign In</button>
+								<button type="button" class="btn btn-default btn-sm" data-dismiss="modal">Cancel</button>
+
+							</form>
+					</div>
+				</div>
+			</div>
+		</div>
+
 	    <header class="jumbotron row-header">
-
 	        <!-- Main component for a primary marketing message or call to action -->
-
 	        <div class="container ">
 	            <div class="row row-header">
 	                <div class="col-xs-12 col-sm-8">
@@ -113,7 +138,11 @@
 	                </div>
                     <div class="col-xs-12 col-sm-2">
                         <p style="padding:40px;"></p>
-                        <a class="btn btn-warning btn-block" href="#table-reservation-form">
+                        <a type="button" class="btn btn-warning btn-block"
+						   href="#table-reservation-form"
+							data-toggle="tooltip"
+							title="Or call us at +85212345678"
+							data-placement="bottom">
                             Reserve Table
                         </a>
                     </div>
@@ -334,5 +363,10 @@
 
 		<script src="lib/jquery/dist/jquery.min.js"></script>
 		<script src="lib/bootstrap/dist/js/bootstrap.min.js"></script>
+		<script>
+			$(document).ready(function(){
+				$('[data-toggle="tooltip"]').tooltip()//activation of tooltip
+			});
+		</script>
 	</body>
-</html>         
+</html>
