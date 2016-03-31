@@ -1,0 +1,22 @@
+{
+  "name": "confusion",
+  "version": "1.0.0",
+  "description": "coursera bootstrap and javascript course",
+  "main": "solve.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/djole87/Confusion.git"
+  },
+  "author": "Djordje",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/djole87/Confusion/issues"
+  },
+  "homepage": "https://github.com/djole87/Confusion#readme",
+  "dependencies": {
+    "prompt": "^1.0.0"
+  }
+}
