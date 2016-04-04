@@ -24,7 +24,7 @@
 			<div class="modal-dialog">
 				<div class="modal-content">
 					<div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<button type="button" class="close" onclick="hideReservationTableModal()">&times;</button>
 						<h4 class="modal-title">Reserve Table</h4>
 					</div>
 					<div class="modal-body">
@@ -86,7 +86,7 @@
 							<div class="form-group">
 								<div class="col-sm-offset-2 col-sm-10">
 									<button type="submit" class="btn btn-primary">Reserve</button>
-									<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+									<button type="button" class="btn btn-default" onclick="hideReservationTableModal()">Cancel</button>
 								</div>
 							</div>
 
@@ -165,7 +165,7 @@
 					</ul>
 					<ul class="nav navbar-nav navbar-right">
 						<li>
-							<a data-toggle="modal" data-target="#loginModal">
+							<a onclick="showLoginModal()">
 								<span class="glyphicon glyphicon-log-in"></span> Login
 							</a>
 						</li>
@@ -180,7 +180,7 @@
 			<div class="modal-dialog" style="width: 650px">
 				<div class="modal-content">
 					<div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<button type="button" class="close" onclick="hideLoginModal()">&times;</button>
 						<h4 class="modal-title">Login</h4>
 					</div>
 
@@ -204,7 +204,7 @@
 									</label>
 								</div>
 								<button type="submit" class="btn btn-info btn-sm">Sign In</button>
-								<button type="button" class="btn btn-default btn-sm" data-dismiss="modal">Cancel</button>
+								<button type="button" class="btn btn-default btn-sm" onclick="hideLoginModal()">Cancel</button>
 
 							</form>
 					</div>
@@ -227,9 +227,7 @@
 	                </div>
                     <div class="col-xs-12 col-sm-2">
                         <p style="padding:40px;"></p>
-                        <a type="button" class="btn btn-warning btn-block"
-						   data-toggle="modal"
-						   data-target="#tableReservationModal">
+                        <a type="button" class="btn btn-warning btn-block reserve-table-js" onclick="showReservationTableModal()">
                             Reserve Table
                         </a>
                     </div>
@@ -464,7 +462,28 @@
 				$("#carousel-play").click(function () {
 					$("#myCarousel").carousel('cycle');
 				});
+
+//				$('.reserve-table-js').on('click', function(){
+//					$("#tableReservationModal").modal('toggle');
+//				});
 			});
+
+			function showReservationTableModal(){
+				$("#tableReservationModal").modal('show');
+			}
+
+			function hideReservationTableModal() {
+				$("#tableReservationModal").modal('hide');
+			}
+
+			function showLoginModal(){
+				$("#loginModal").modal('show');
+			}
+
+			function hideLoginModal(){
+				$("#loginModal").modal('hide');
+			}
+
 		</script>
 	</body>
 </html>
